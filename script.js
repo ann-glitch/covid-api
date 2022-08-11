@@ -32,6 +32,7 @@ async function getData() {
 
 getData();
 
+//a function to filter out a country.
 function filterCountries(event) {
   const inputData = event.target.value.toLowerCase();
 
@@ -46,9 +47,11 @@ function filterCountries(event) {
   });
 }
 
+//an eventlistener to filter out the user's choice of country.
 const inputBox = document.querySelector(".input-box");
 inputBox.addEventListener("keydown", filterCountries);
 
+//an eventlistener to reload the page.
 const refreshBtn = document.getElementById("refresh-btn");
 refreshBtn.addEventListener("click", () => {
   location.reload();
