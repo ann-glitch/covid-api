@@ -1,7 +1,13 @@
 # covidApi
 
-- a simple api that returns countries and their covid live charts.
-- It can also filter out any country based on the user's input.
+## learnt
+
+- how to filter out a table data.
+
+## outcome
+
+- it displays the covid charts of all countries in the world.
+- it filters out a particular country(when queried).
 
 ## live preview
 
