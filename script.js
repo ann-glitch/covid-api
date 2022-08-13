@@ -1,3 +1,5 @@
+const table = document.querySelector(".table");
+
 //a helper function for the table data
 function td(content) {
   const td = document.createElement("td");
@@ -13,9 +15,9 @@ async function getData() {
     console.log(covidData.Countries);
 
     covidData.Countries.forEach((data) => {
-      const table = document.querySelector(".table");
       const tbody = document.createElement("tbody");
       const tr = document.createElement("tr");
+      tr.classList.add("tr");
 
       tr.appendChild(td(data.Country));
       tr.appendChild(td(data.TotalConfirmed));
@@ -36,13 +38,13 @@ getData();
 function filterCountries(event) {
   const inputData = event.target.value.toLowerCase();
 
-  document.querySelectorAll("tbody").forEach((data) => {
-    const searchedKey = data.firstChild.textContent;
+  document.querySelectorAll("tbody").forEach((tr) => {
+    const searchedKey = tr.firstChild.textContent;
 
     if (searchedKey.toLowerCase().indexOf(inputData) > -1) {
-      data.style.display = "block";
+      tr.style.display = "";
     } else {
-      data.style.display = "none";
+      tr.style.display = "none";
     }
   });
 }
