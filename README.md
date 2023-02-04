@@ -11,4 +11,4 @@
 
 ## live preview
 
-https://ann-glitch.github.io/covidApi/
+[Live Site](https://ann-glitch.github.io/covid-api)
